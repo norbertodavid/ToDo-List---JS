@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+
+    <!-- Font Aewsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS do Projeto -->
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- JavaScript do Projeto (o defer faz com que os arquivos sejam carregados após o HTML..
+      para que não ocorra o erro de carregamento.)-->
+    <script src="JS/script.js" defer></script>
+  </head>
+  <body>
+    <div class="toDo-container">
+      <header>
+        <h1>ToDo List - Avançado</h1>
+      </header>
+      <form id="toDo-form">
+        <p>Adicione a sua tarefa:</p>
+        <div class="form-control">
+          <input
+            type="text"
+            id="toDo-input"
+            placeholder="O que você vai fazer?"
+          />
+          <button type="submit">
+            <!-- ícone trazido do font awesome -->
+            <i class="fa-thin fa-plus"></i>
+          </button>
+        </div>
+      </form>
+      <form id="edit-form" class="hide">
+        <p>Edite sua tarefa:</p>
+        <div class="form-control">
+          <input type="text" id="edit-input" />
+          <button type="submit">
+            <i class="fa-solid fa-check-double"></i>
+          </button>
+        </div>
+        <button id="cancel-edit-btn">Cancelar</button>
+      </form>
+      <div id="toolbar">
+        <div id="search">
+          <h4>Pesquisar:</h4>
+          <form>
+            <input type="text" id="search-input" placeholder="Buscar" />
+            <button id="search-btn">
+              <i class="fa-solid fa-search"></i>
+            </button>
+            <button id="erase-btn">
+              <i class="fa-solid fa-delete-left"></i>
+            </button>
+          </form>
+        </div>
+        <div id="filter">
+          <h4>Filtrar:</h4>
+          <select id="filter-select">
+            <option value="all">Todos</option>
+            <option value="done">Feitos</option>
+            <option value="toDo">A fazer</option>
+          </select>
+        </div>
+      </div>
+      <div id="toDo-list">
+        <div class="toDo done">
+          <h3>Exemplo 1</h3>
+          <button class="finish-toDo">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="edit-toDo">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="remove-toDo">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="toDo">
+          <h3>Exemplo 2</h3>
+          <button class="finish-toDo">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button class="edit-toDo">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="remove-toDo">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <footer id="toDo-footer">
+        <div id="footer-btn">
+          <button id="whats-btn">
+            <a href="https://contate.me/norberto-david" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </button>
+          <button id="linkedIn-btn">
+            <a href="https://www.linkedin.com/in/norberto-david-sp/" target="_blank">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </button>
+          <button id="github-btn">
+            <a href="https://github.com/norbertodavid" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </button>
+        </div>
+        <p class="footer-text">
+          Feito com ❤️ por <br />
+          Norberto David
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
